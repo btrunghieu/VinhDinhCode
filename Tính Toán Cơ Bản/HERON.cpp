@@ -17,7 +17,7 @@ int main(){
         cout << 0;
         return 0;
     }
-    long double p = (a+b+c) / 2;
+    long double p = (long double)(1.0*(a+b+c) / 2);
     long double ans = sqrt(p*(p-a) * (p-b) * (p-c));
     cout << setprecision(2) << fixed << ans;
     return 0;
