@@ -2,6 +2,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 #define ll long long
+#define ull unsigned long long
 #define pi pair<int, int>
 #define fi first
 #define se second
@@ -11,12 +12,10 @@ int main(){
     //freopen("out.out","w", stdout);
     ios_base::sync_with_stdio(0);
     cin.tie(NULL);
-    cout.tie(NULL); 
-    ll n; cin >> n;
-    for (int i=1; i<=n-1; i++){
-        cout << i << " "  << n-i;
-        return 0;
-    }
-    cout << 0 << " " << 0;
+    cout.tie(NULL);
+    long double a, b; cin >> a >> b;
+    long double res = ((a / 2) - b) * 2; 
+    long long ans = (long long) 1LL * res;
+    cout << ans ;
     return 0;
 }
