@@ -13,14 +13,17 @@ int main(){
     ios_base::sync_with_stdio(0);
     cin.tie(NULL);
     cout.tie(NULL);
-    long double a, b; cin >> a >> b;
-    int res = 0;
-    while (a<b){
-        a *=11;
-        a /=10;
-        a = round(a);
-        res++;
+    int n, m;cin >> n ;
+    int ans = 0;
+    for (int i=1; i<=n; i++){
+        for (int j=1; j<=n; j++){
+            int x; cin >> x;
+            if (x > ans){
+               ans = x;
+            }
+        }
+        cout << ans << '\n';
+        ans = 0;
     }
-    cout << res;
     return 0;
 }

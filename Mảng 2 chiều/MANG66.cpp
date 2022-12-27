@@ -7,20 +7,27 @@ using namespace std;
 #define fi first
 #define se second
 
+int a[106][106];
+
 int main(){
     //freopen("in.inp","r", stdin);
     //freopen("out.out","w", stdout);
     ios_base::sync_with_stdio(0);
     cin.tie(NULL);
     cout.tie(NULL);
-    long double a, b; cin >> a >> b;
-    int res = 0;
-    while (a<b){
-        a *=11;
-        a /=10;
-        a = round(a);
-        res++;
+    int n, m; cin >> n >> m;
+    for (int i=1; i<=n; i++){
+        for (int j=1; j<=m; j++){
+            cin >> a[i][j];
+        }
     }
-    cout << res;
+    for (int j=1; j<=m; j++){
+        int sum = 0;
+        for (int i=1; i<=n; i++){
+            sum +=a[i][j];
+        }
+        cout << sum << '\n';
+        sum = 0;
+    }
     return 0;
 }

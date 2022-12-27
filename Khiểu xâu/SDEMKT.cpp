@@ -13,14 +13,13 @@ int main(){
     ios_base::sync_with_stdio(0);
     cin.tie(NULL);
     cout.tie(NULL);
-    long double a, b; cin >> a >> b;
-    int res = 0;
-    while (a<b){
-        a *=11;
-        a /=10;
-        a = round(a);
-        res++;
+    string s; getline(cin, s);
+    int ans = 0;
+    for (int i=0; i<s.size(); i++){
+        if (s[i]-'0' >= 0 && s[i]-'0' <=9){
+            ans++;
+        }
     }
-    cout << res;
+    cout << ans;
     return 0;
 }
